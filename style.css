@@ -97,15 +97,6 @@ body {
   /* background-color: #121212; */
 }
 
-.leftbar {
-  height: 90vh;
-  background-color: #121212;
-  position: sticky;
-  top: 0;
-  left: 0;
-  position: sticky;
-}
-
 .player {
   height: 10vh;
   grid-column: 1 / -1;
@@ -374,4 +365,109 @@ body {
   font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
   color: #000000;
   font-size: 3rem;
+}
+
+/* leftBar */
+.leftbar {
+  height: 90vh;
+  background-color: #121212;
+  position: sticky;
+  top: 0;
+  left: 0;
+  position: sticky;
+  color: #a7a7a7;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.friend-activity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.friend-activity h2 {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.friend-activity-btn {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.friend-icon {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+  transition: all 500ms;
+}
+.friend-icon:hover {
+  background-color: #383535b3;
+  cursor: pointer;
+}
+
+.friend-acitivity-p {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.friend-user-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.friend-user-profile {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+.friend-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.friend-info-skeletal {
+  width: 8rem;
+  height: 0.7rem;
+  border-radius: 5px;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+.friend-info-skeletal:first-child {
+  width: 10rem;
+}
+.friend-settings {
+  height: 4.5rem;
+  width: 12rem;
+  background: #fff;
+  border-radius: 30px;
+  display: grid;
+  place-items: center;
+  color: #000000;
+  align-self: center;
+}
+.friend-settings p {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+/* end of Leftbar */
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0, 0%, 21%);
+  }
+  100% {
+    background-color: hsl(198, 4%, 52%);
+  }
 }
