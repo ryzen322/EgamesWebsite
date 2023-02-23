@@ -6,7 +6,7 @@ const item = [
   },
   {
     title: "My Playlist #4",
-    name: "Rj S Gammad",
+    name: "Alfredo N. Nikes",
     img: "profile.jpg",
   },
   {
