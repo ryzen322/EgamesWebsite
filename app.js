@@ -129,3 +129,21 @@ item.forEach((e) => {
 
   sectionArtist.insertAdjacentHTML("beforeend", html);
 });
+
+const skelaton = document.querySelectorAll(".section-artist")[1];
+item.splice(0, item.length - 2).forEach((e) => {
+  const html = `<div class="artist-playlist">
+  <div class="artist-album">
+   
+    <div class="play-btn">
+      <span class="material-symbols-outlined"> play_arrow </span>
+    </div>
+  </div>
+  <div class="section-3-skeletal"></div>
+  <div class="section-3-skeletal"></div>
+  <div class="section-3-skeletal"></div>
+  <div class="section-3-skeletal"></div>
+</div>`;
+
+  skelaton.insertAdjacentHTML("beforeend", html);
+});
