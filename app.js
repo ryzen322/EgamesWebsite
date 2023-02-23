@@ -85,3 +85,47 @@ item.forEach((element) => {
 
   myplaylist.insertAdjacentHTML("beforeend", html);
 });
+
+const home = document.querySelector("#home");
+const content = document.querySelector(".content");
+
+home.addEventListener("click", () => {
+  // content.classList.toggle("display-none");
+});
+
+const sectionMyPlaylist = document.querySelector(".section-myplaylist");
+
+const favortiesPlaylist = [1, 2, 3, 4, 5];
+
+item.slice(0, 5).forEach((e) => {
+  const html = `<div class="myplaylist-element">
+  <div class="myplaylist-element-img">
+    <img src="./img/${e.img}" alt="" />
+    <span class="material-symbols-outlined"> favorite </span>
+  </div>
+  <h1>${e.name}</h1>
+
+  <div class="play-btn-1">
+    <span class="material-symbols-outlined"> play_arrow </span>
+  </div>
+</div>`;
+
+  sectionMyPlaylist.insertAdjacentHTML("beforeend", html);
+});
+
+const sectionArtist = document.querySelector(".section-artist");
+
+item.forEach((e) => {
+  const html = `<div class="artist-playlist">
+  <div class="artist-album">
+    <img src="./img/${e.img}" alt="" />
+    <div class="play-btn">
+      <span class="material-symbols-outlined"> play_arrow </span>
+    </div>
+  </div>
+  <h1>${e.name}</h1>
+  <p>Artist</p>
+</div>`;
+
+  sectionArtist.insertAdjacentHTML("beforeend", html);
+});

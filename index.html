@@ -21,15 +21,15 @@
           </li>
           <li>
             <span class="material-symbols-outlined"> Home </span>
-            <a href="#">Home</a>
+            <a href="#section-1" id="home">Home</a>
           </li>
           <li>
             <span class="material-symbols-outlined"> Library_add </span>
-            <a href="#">Your Library</a>
+            <a href="#section-2">Your Library</a>
           </li>
           <li>
             <span class="material-symbols-outlined"> file_open </span>
-            <a href="#">File Manager</a>
+            <a href="#navbar">File Manager</a>
           </li>
         </ul>
         <ul class="sidebar-icons">
@@ -64,7 +64,7 @@
       </div>
 
       <main class="main">
-        <nav class="navigation">
+        <nav class="navigation" id="navbar">
           <div class="navscrol">
             <div class="navscrol-item active">
               <span class="material-symbols-outlined"> navigate_before </span>
@@ -89,7 +89,8 @@
         <div class="adds">
           <img src="./img/add.png" alt="" />
         </div>
-        <div class="content">
+
+        <div class="content" id="section-1">
           <header class="header-content"><h1>Playlists</h1></header>
 
           <div class="myplaylist">
@@ -111,6 +112,48 @@
             </div>
           </div>
         </div>
+        <section id="section-2">
+          <header class="header--1">Good evening</header>
+          <div class="section-myplaylist">
+            <div class="myplaylist-element">
+              <div class="myplaylist-element-img">
+                <img src="./img/50cents.jpg" alt="" />
+                <span class="material-symbols-outlined"> favorite </span>
+              </div>
+              <h1>Liked Songs</h1>
+
+              <div class="play-btn-1">
+                <span class="material-symbols-outlined"> pause </span>
+              </div>
+            </div>
+          </div>
+          <div class="section-artist">
+            <header class="header--1">Suggested artists</header>
+            <div class="artist-playlist">
+              <div class="artist-album">
+                <img src="./img/matchbocx.jpg" alt="" />
+                <div class="play-btn">
+                  <span class="material-symbols-outlined"> play_arrow </span>
+                </div>
+              </div>
+              <h1>Juice WRLD</h1>
+              <p>Artist</p>
+            </div>
+          </div>
+          <div class="section-artist">
+            <header class="header--1">Popular artists</header>
+            <div class="artist-playlist">
+              <div class="artist-album">
+                <img src="./img/matchbocx.jpg" alt="" />
+                <div class="play-btn">
+                  <span class="material-symbols-outlined"> play_arrow </span>
+                </div>
+              </div>
+              <h1>Juice WRLD</h1>
+              <p>Artist</p>
+            </div>
+          </div>
+        </section>
       </main>
       <div class="leftbar">
         <div class="friend-activity">
