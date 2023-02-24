@@ -1,13 +1,13 @@
 const item = [
   {
     title: "My Playlist #5",
-    name: "Rj S Gammad",
-    img: "profile.jpg",
+    name: "21Savage",
+    img: "21Savage.jpg",
   },
   {
     title: "My Playlist #4",
-    name: "Alfredo N. Nikes",
-    img: "profile.jpg",
+    name: "Travis Scott",
+    img: "travisScott.jpg",
   },
   {
     title: "Eminem",
@@ -72,7 +72,7 @@ item.forEach((element) => {
   const html = `<div class="created-playlist">
   
     <div class="playlist-img">
-    <img src="./img/${element.img}" alt="" />
+    <img src="./img/${element.img}" alt=""  loading="lazy"/>
       <span class="material-symbols-outlined"> headphones </span>
 
       <div class="play-btn">
@@ -100,7 +100,7 @@ const favortiesPlaylist = [1, 2, 3, 4, 5];
 item.slice(0, 5).forEach((e) => {
   const html = `<div class="myplaylist-element">
   <div class="myplaylist-element-img">
-    <img src="./img/${e.img}" alt="" />
+    <img src="./img/${e.img}" alt=""  loading="lazy"/>
     <span class="material-symbols-outlined"> favorite </span>
   </div>
   <h1>${e.name}</h1>
@@ -118,7 +118,7 @@ const sectionArtist = document.querySelector(".section-artist");
 item.forEach((e) => {
   const html = `<div class="artist-playlist">
   <div class="artist-album">
-    <img src="./img/${e.img}" alt="" />
+    <img src="./img/${e.img}" alt=""  loading="lazy"/>
     <div class="play-btn">
       <span class="material-symbols-outlined"> play_arrow </span>
     </div>

@@ -482,11 +482,11 @@ body {
   color: #ffff;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 10vh;
   position: fixed;
   left: 0;
   bottom: 0;
   right: 0;
+  z-index: 100;
 }
 .player-active {
   display: flex;
@@ -778,7 +778,8 @@ body {
     display: grid;
     grid-template-columns: 20rem 1fr 25rem;
   }
-  .sidebar {
+  .player {
+    grid-template-columns: repeat(2, max-content);
   }
   .main {
     grid-column: 2 / -1;
