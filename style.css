@@ -855,4 +855,13 @@ body {
   .navscrol-subscription {
     display: none;
   }
+  .section-myplaylist {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  }
+  .userphoto img {
+    z-index: -11;
+  }
 }
