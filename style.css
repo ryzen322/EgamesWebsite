@@ -67,6 +67,7 @@ body {
   display: flex;
   align-items: center;
   gap: 1rem;
+  cursor: pointer;
 }
 
 .sidebar-icons a {
@@ -104,6 +105,8 @@ body {
   padding: 0 2rem;
   background-color: #121212;
   scroll-behavior: smooth;
+  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 .main::-webkit-scrollbar {
   background-color: #121212;
@@ -808,9 +811,10 @@ body {
     /* background-color: #1ed760; */
   }
 
-  .sidebar-icons li a {
+  .sidebar-icons li a:last-child {
     display: none;
   }
+
   .sidebar-icons li span {
     font-size: 3.5rem;
   }
@@ -829,17 +833,26 @@ body {
   .player {
     background-color: #000000;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
+
   .player-active-img {
     display: none;
   }
+
   .player-music {
     justify-content: center;
   }
+
   .player-music-progress progress {
-    text-align: center;
-    width: 23rem;
+    display: none;
+  }
+
+  .navigation {
+    padding: 0 1rem;
+  }
+  .navscrol-subscription {
+    display: none;
   }
 }
