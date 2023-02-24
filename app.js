@@ -2,7 +2,7 @@ const item = [
   {
     title: "My Playlist #5",
     name: "21Savage",
-    img: "21Savage.jpg",
+    img: "21savage.jpg",
   },
   {
     title: "My Playlist #4",
