@@ -244,7 +244,7 @@ body {
   display: grid;
   gap: 2.25rem;
   grid-template-columns: repeat(auto-fill, minmax(18.8rem, 1fr));
-  grid-auto-rows: 30rem;
+  grid-auto-rows: max-content;
 
   cursor: pointer;
 }
@@ -480,6 +480,10 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 10vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 .player-active {
   display: flex;
@@ -787,6 +791,11 @@ body {
     grid-row: 1 / 2;
   }
 }
+@media only screen and (max-width: 25.875em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 @media only screen and (max-width: 25.875em) {
   .container {
@@ -795,7 +804,7 @@ body {
   }
   .sidebar {
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
   }
 
   .sidebar-icons li a {
@@ -803,5 +812,14 @@ body {
   }
   .sidebar-playlist {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  html {
+    font-size: 43.75%;
+  }
+  .sidebar {
+    background-color: #1ed760;
   }
 }
