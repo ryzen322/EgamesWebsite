@@ -26,15 +26,22 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+@media only screen and (max-width: 25.875em) {
+  html {
+    font-size: 25.875%;
+  }
+}
 
 body {
   background-color: #ccc;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 .container {
+  height: 100vh;
   display: grid;
-  grid-template-columns: 25rem 1fr 30rem;
+  grid-template-columns: 25rem 1fr 25rem;
 }
 /* 
 ////////////////////////////////////////
@@ -244,7 +251,7 @@ body {
 
 .liked-playlist {
   border-radius: 10px;
-  background: linear-gradient(#4b14f4, #9198e5);
+  background: linear-gradient(to bottom right, #4b14f4, #9198e5);
   padding: 5rem 1.5rem 3rem 2rem;
   display: flex;
   flex-direction: column;
@@ -297,7 +304,7 @@ body {
 }
 
 .playlist-img {
-  height: 60%;
+  height: 20rem;
   width: 100%;
   background-color: #333333;
   border-radius: 5px;
@@ -465,14 +472,14 @@ body {
 
 /* player bottom */
 .player {
-  height: 10vh;
+  grid-row: 2 / 3;
   grid-column: 1 / -1;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 1rem;
   color: #ffff;
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  height: 10vh;
 }
 .player-active {
   display: flex;
@@ -637,7 +644,7 @@ body {
 .myplaylist-element-img {
   height: 100%;
   width: 8.5rem;
-  background: linear-gradient(#4b14f4, #9198e5);
+  background: linear-gradient(to bottom left, #4b14f4, #9198e5);
   border-top-left-radius: 0.8rem;
   border-bottom-left-radius: 0.8rem;
   display: flex;
@@ -753,4 +760,48 @@ body {
   border-radius: 10px;
   animation: skeleton-loading 1s linear infinite alternate;
   margin-right: auto;
+}
+
+.display-none {
+  display: none;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .container {
+    display: grid;
+    grid-template-columns: 20rem 1fr 25rem;
+  }
+  .sidebar {
+  }
+  .main {
+    grid-column: 2 / -1;
+  }
+  .leftbar {
+    display: none;
+  }
+  .adds {
+    padding: 0;
+  }
+  .liked-playlist {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+}
+
+@media only screen and (max-width: 25.875em) {
+  .container {
+    display: grid;
+    grid-template-columns: max-content 1fr 25rem;
+  }
+  .sidebar {
+    align-items: center;
+    /* justify-content: center; */
+  }
+
+  .sidebar-icons li a {
+    display: none;
+  }
+  .sidebar-playlist {
+    display: none;
+  }
 }
