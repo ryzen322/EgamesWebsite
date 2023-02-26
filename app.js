@@ -3,6 +3,14 @@ const item = [
     title: "My Playlist #5",
     name: "21Savage",
     img: "21savage.jpg",
+    views: "235,623,612",
+    album: [
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+    ],
   },
   {
     title: "My Playlist #4",
@@ -146,4 +154,95 @@ item.splice(0, item.length - 2).forEach((e) => {
 </div>`;
 
   skelaton.insertAdjacentHTML("beforeend", html);
+});
+
+const item2 = [
+  {
+    title: "My Playlist #5",
+    name: "21Savage",
+    img: "21savage.jpg",
+    views: "235,623,612",
+    album: [
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+      { title: "Revenge", views: "233,222,111", duration: "3:48" },
+    ],
+  },
+  {
+    title: "My Playlist #4",
+    name: "Travis Scott",
+    img: "travisScott.jpg",
+  },
+  {
+    title: "Eminem",
+    name: "Rj S Gammad",
+    img: "eminem.jpg",
+  },
+  {
+    title: "SixCylceMind",
+    name: "Henry Lawrence",
+    img: "six.jpg",
+  },
+  {
+    title: "The Itchyworms",
+    name: "Itchyworms",
+    img: "itchy.jpg",
+  },
+  {
+    title: "OPM Favorites",
+    name: "100% Pinoy hits",
+    img: "opm.jpg",
+  },
+  {
+    title: "Matchox",
+    name: "Matchbox 21his",
+    img: "matchbocx.jpg",
+  },
+  {
+    title: "Simple Plan",
+    name: "Simple plan",
+    img: "simpe.jpg",
+  },
+  {
+    title: "50cents best hit",
+    name: "50cents",
+    img: "50cents.jpg",
+  },
+  {
+    title: "Best hits 2020-2019",
+    name: "Tiktok",
+    img: "tiktokhits.jpg",
+  },
+  {
+    title: "Best hits 2021-2012",
+    name: "Tiktok Now here",
+    img: "tiktok.jpg",
+  },
+  {
+    title: "Kenny rogers Tour",
+    name: "Kenny Rogers",
+    img: "kennyrogers.jpg",
+  },
+  {
+    title: "The last hit",
+    name: "JYT",
+    img: "thelast.jpg",
+  },
+];
+
+const sample = document.querySelectorAll(".created-playlist");
+
+const xample = document.querySelectorAll(".created-playlist p");
+
+sample.forEach((data, iteration) => {
+  data.addEventListener("click", () => {
+    const value = xample[iteration].innerHTML;
+    const nameUser = value.split(" ").splice(1, 3).join(" ");
+
+    const [tryError] = item2.filter((data) => data.name === nameUser);
+    const { name, img, views, album } = tryError;
+    console.log(name, img, views, album);
+  });
 });
