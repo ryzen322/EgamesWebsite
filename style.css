@@ -902,6 +902,7 @@ body {
   align-items: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  position: relative;
 }
 .box-music__logo {
   height: 20rem;
@@ -946,6 +947,23 @@ body {
   color: #fff;
   font-weight: 400;
   transform: translateY(30px);
+}
+
+.box-music-btn {
+  background-color: #1ed760;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+.box-music-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-music-btn span {
+  color: #000000;
 }
 
 /* box-display-grid */
@@ -1015,8 +1033,8 @@ body {
   background-color: #2e2e2e;
   border-radius: 0.5rem;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding: 1rem 2rem;
 }
@@ -1090,6 +1108,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.amount-views {
+  text-align: center;
 }
 .amount-views p {
   color: #a7a7a7;
