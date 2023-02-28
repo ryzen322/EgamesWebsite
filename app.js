@@ -258,10 +258,10 @@ const item2 = [
         photoUrl: "rapgod.jpg",
       },
       {
-        title: "Love The Way You Lie ft. Rihanna",
+        title: "Love The Way You",
         views: "2.5B",
         duration: "4:27",
-        photoUrl: "lovethewayyoulie.jpg",
+        photoUrl: "lovethewayyoulie.png",
       },
       {
         title: "The Real Slim Shady",
@@ -493,7 +493,7 @@ const item2 = [
         title: "Candy Shop",
         views: "726M",
         duration: "4:11",
-        photoUrl: "candyshop.jpg",
+        photoUrl: "21questions.jpg",
       },
       {
         title: "P.I.M.P.",
